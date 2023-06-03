@@ -1,10 +1,12 @@
 package nopecho.webflux.adapter.in;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
@@ -12,10 +14,10 @@ import reactor.core.publisher.Flux;
 public class DummyController {
 
     @GetMapping("/call1")
-    public Flux<?> getOrders() throws InterruptedException {
+    public Mono<ResponseEntity<?>> getOrders() throws InterruptedException {
         log.info("call 1");
         Thread.sleep(5000);
-        return Flux.empty();
+        return Mono.just(ResponseEntity.ok(Flux.empty()));
     }
 
     @GetMapping("/call2")
