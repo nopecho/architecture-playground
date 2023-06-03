@@ -1,0 +1,7 @@
+rootProject.name = 'webflux-playground'
+
+include('server')
+include('server:webflux')
+
+include('core')
+include('core:domain')
