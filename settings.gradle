@@ -6,3 +6,8 @@ include('server:mvc')
 
 include('core')
 include('core:domain')
+include 'server:mvc:adapter'
+findProject(':server:mvc:adapter')?.name = 'adapter'
+include 'server:mvc:application'
+findProject(':server:mvc:application')?.name = 'application'
+
