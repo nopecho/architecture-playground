@@ -22,7 +22,7 @@ public class UpdateAndDeleteCommandHandler implements CommandHandler {
 
     @Override
     public void handle(Command command) {
-        UpdateAndDeleteCommand updateAndDeleteCommand = (UpdateAndDeleteCommand) command;
+        UpdateAndDeleteCommand updateAndDeleteCommand = validateAndConvert(command, UpdateAndDeleteCommand.class);
 
         CreateUserCommand createUserCommand = updateAndDeleteCommand.toCreateUserCommand();
         createUserCommandHandler.handle(createUserCommand);

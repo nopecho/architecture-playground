@@ -26,7 +26,7 @@ public class XxxCommandHandler implements CommandHandler {
     @Transactional
     @Override
     public void handle(Command command) {
-        XxxCommand xxxCommand = validateAndCast(command, XxxCommand.class);
+        XxxCommand xxxCommand = validateAndConvert(command, XxxCommand.class);
         //do anything..
 
         //do command convert..

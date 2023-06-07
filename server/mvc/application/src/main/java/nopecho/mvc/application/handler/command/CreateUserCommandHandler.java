@@ -23,7 +23,7 @@ public class CreateUserCommandHandler implements CommandHandler {
 
     @Override
     public void handle(Command command) {
-        CreateUserCommand createCommand = validateAndCast(command, CreateUserCommand.class);
+        CreateUserCommand createCommand = validateAndConvert(command, CreateUserCommand.class);
         User user = UserFactory.create(createCommand);
         createUserPort.create(user);
     }
