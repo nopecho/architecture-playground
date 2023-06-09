@@ -1,10 +1,10 @@
 package nopecho.mvc.adapter.in;
 
 import lombok.RequiredArgsConstructor;
-import nopecho.mvc.application.port.in.query.CompositeQueryHandler;
-import nopecho.mvc.application.port.in.query.UserQuery;
-import nopecho.mvc.application.port.in.query.UsersQuery;
-import nopecho.mvc.application.port.in.query.result.QueryResult;
+import nopecho.server.application.port.in.query.CompositeQueryHandler;
+import nopecho.server.application.port.in.query.UserQuery;
+import nopecho.server.application.port.in.query.UsersQuery;
+import nopecho.server.application.port.in.query.result.QueryResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,5 +1,5 @@
 dependencies {
-    implementation (project(':server:mvc:application'))
+    implementation (project(':server:application'))
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'

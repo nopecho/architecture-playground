@@ -1,0 +1,14 @@
+dependencies {
+    implementation (project(':server:application'))
+
+    implementation 'io.projectreactor:reactor-tools:3.5.6'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+    implementation 'org.postgresql:r2dbc-postgresql:1.0.1.RELEASE'
+
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+jar {
+    enabled = false
+}

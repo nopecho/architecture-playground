@@ -1,8 +1,8 @@
 package nopecho.mvc.adapter.in;
 
 import lombok.RequiredArgsConstructor;
-import nopecho.mvc.application.port.in.command.CompositeCommandHandler;
-import nopecho.mvc.application.port.in.command.CreateUserCommand;
+import nopecho.server.application.port.in.command.CompositeCommandHandler;
+import nopecho.server.application.port.in.command.CreateUserCommand;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -4,10 +4,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import nopecho.domain.User;
 import nopecho.mvc.adapter.config.Adapter;
-import nopecho.mvc.adapter.out.persistence.DomainTransformer;
+import nopecho.mvc.adapter.out.persistence.EntityTransformer;
 import nopecho.mvc.adapter.out.persistence.UserEntity;
 import nopecho.mvc.adapter.out.persistence.UserEntityRepository;
-import nopecho.mvc.application.port.out.CreateUserPort;
+import nopecho.server.application.port.out.CreateUserPort;
 
 @Slf4j
 @Adapter
@@ -18,7 +18,7 @@ public class UserCommandPersistenceAdapter implements CreateUserPort {
 
     @Override
     public void create(User user) {
-        UserEntity entity = DomainTransformer.transform(user);
+        UserEntity entity = EntityTransformer.transform(user);
         repository.save(entity);
     }
 }
